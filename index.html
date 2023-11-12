@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>국방모바일보안(병사)</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="manifest" href="manifest.webmanifest" />
+		<meta name="viewport" content="user-scalable=no">
+	</head>
+	<body>
+		<div class="yellow-bg">
+			<div class="title">
+				<label for="check-btn">
+					<span class="menu-btn">메뉴</span>
+				</label>
+				<img class="mnd-logo" src="img/drawable/mnd.png">
+				<img class="alert-btn" src="img/drawable/img_common_btn_alert.png">
+			</div>
+			<div class="installed-date">
+				<span id="installed-date-text"><strong>설치일시 : </strong>23.07.05 11:00</span>
+				<span id="closed-date-text"><strong>차단일시 : </strong>23.10.17 18:35</span>
+			</div>
+		</div>
+		<img class="yellow-bg-bottom" src="img/drawable-hdpi-v4/img_bg_user_soldier_sub.png">
+		<div class="main">
+			<img class="helpcall-logo" src="img/drawable/helpcall.png">
+			<div class=progress>
+				<img class="progress-circle" src="img/drawable-hdpi-v4/img_progress_circle.png">
+				<img class="deny-camera" src="img/drawable-hdpi-v4/img_policy_state_camera_block.png">
+				<span class="date">24일<br>20 : 33 : <b>19</b></span>
+			</div>
+		</div>
+		<div class="footer">
+			<button>
+				카메라 허용
+			</button>
+			<div class="copyright">
+				<span class="label">Version </span><span id="version-text">2.1.10</span>
+			</div>
+		</div>
+		<input id="check-btn" type="checkbox" hidden>
+		<div class="sidebar">
+			<label for="check-btn">
+				<span class="close">×</span>
+			</label>
+			<img class="mnd-logo" src="img/drawable/mnd.png">
+			<h2>
+				국방모바일보안
+			</h2>
+			<p>
+				고객지원센터<br>
+				02) 6424 - 5282 ~ 5284
+			</p>
+			<hr class="main">
+			<div class="subtitle">
+				<span>앱 정보</span>
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon" src="images/img_ico_menu_guide.png">
+				<span>사용가이드</span>
+				<img class="arrow" src="img/arrow.png">
+			</div>
+			<hr class="sub">
+			<div id="view-log" class="content">
+				<img class="icon" src="images/img_ico_menu_log.png">
+				<span>로그보기</span>
+				<img class="arrow" src="img/arrow.png">
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon2" src="images/img_ico_menu_voice.png">
+				<span>음성알림</span><br>
+				<small>차단 또는 허용 시 음성 알림</small>
+				<label for="check-voice-pref">
+					<input id="check-voice-pref" type="checkbox" hidden>
+					<img id="voice-pref" class="toggle">
+				</label>
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon2" src="images/img_ico_menu_vibration.png">
+				<span>진동알림</span><br>
+				<small>차단 또는 허용 시 진동 알림</small>
+				<label for="check-vibe-pref">
+					<input id="check-vibe-pref" type="checkbox" hidden>
+					<img id="vibe-pref" class="toggle">
+				</label>
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon" src="images/img_ico_menu_gps.png">
+				<span>위치기반 해제</span>
+				<img class="arrow" src="img/arrow.png">
+			</div>
+			<hr class="sub">
+			<div class="subtitle">
+				<span>시스템 정보</span>
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon3" src="images/img_ico_check.png">
+				<span>제조사</span>
+				<span class="text" id="sidebar-manufactor"></span>
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon3" src="images/img_ico_check.png">
+				<span>모델명</span>
+				<span class="text" id="sidebar-model"></span>
+			</div>
+			<hr class="sub">
+			<div class="content">
+				<img class="icon3" src="images/img_ico_check.png">
+				<span>OS버전</span>
+				<span class="text" id="sidebar-os"></span>
+			</div>
+		</div>
+		<script type="text/javascript" src="index.js"></script>
+		<script type="module">
+			import './pwaupdate.js';
+			const el = document.createElement('pwa-update');
+			document.body.appendChild(el);
+		</script>
+	</body>
+</html>

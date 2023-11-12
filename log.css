@@ -1,0 +1,71 @@
+html body {
+	margin: 0;
+	font-size: 2em;
+	font-family: sans-serif;
+	background-color: #252525;
+	user-select: none;
+}
+
+.titlebar {
+	background-color: #252525;
+	color: white;
+	font-weight: 600;
+	font-size: 1.4em;
+	padding: 22px 0 58px 0;
+	text-align: center;
+}
+
+.titlebar .back {
+	position: absolute;
+	left: 18px;
+	top: 18px;
+	height: 92px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #252525;
+	color: white;
+	font-weight: 600;
+	padding: 18px 0 18px 0;
+	text-align: center;
+}
+
+.footer button {
+	border: 0;
+	color: white;
+	width: 90%;
+	font-size: 1.1em;
+	background-color: #59433D;
+	border-radius: 64px;
+	padding: 32px 0;
+	margin-bottom: 16pt;
+}
+
+.footer button:hover {
+	background-color: #48372F;
+}
+
+.logs-here {
+	display: block;
+	color: white;
+	font-size: 10pt;
+	height: 83vh;
+	overflow: scroll;
+}
+
+.logs-here p {
+	display: block;
+	margin: 22px;
+	padding: 22px;
+}
+
+.logs-here p.camera-opened {
+	background-color: #454545;
+}
+
+.logs-here p.camera-closed {
+	background-color: #59423A;
+}

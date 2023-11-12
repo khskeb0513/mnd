@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>설정</title>
+		<meta name="viewport" content="user-scalable=yes">
+		<link rel="stylesheet" href="setting.css">
+	</head>
+	<body>
+		<h1>
+			국방모바일보안(병사용) 설정
+		</h1>
+		<hr>
+		<ul>
+			<li>
+				<label>앱버전<input name="version" type="text"></label>
+			</li>
+			<li>
+				<label>제조사<input name="제조사" type="text"></label>
+			</li>
+			<li>
+				<label>모델명<input name="모델명" type="text"></label>
+			</li>
+			<li>
+				<label>OS버전<input name="OS버전" type="text"></label>
+			</li>
+			<li>
+				<button onclick="saveDeviceInfo()">저장</button>
+			</li>
+		</ul>
+		<hr>
+		<h2>
+			로그설정
+		</h2>
+		<h3>
+			행 추가
+		</h3>
+		<ul>
+			<li>
+				<label>
+					해당로그 카메라 허용인지<input type="checkbox" name="isOpened">
+				</label>
+			</li>
+			<li>
+				<small>
+					허용=회색, 차단=적색
+				</small>
+			</li>
+			<li>
+				<label>
+					변동일시<input type="datetime-local" name="date">
+				</label>
+			</li>
+			<li>
+				<label>
+					첫번째행<input type="text" name="title">
+				</label>
+			</li>
+			<li>
+				<small>
+					예) 카메라 허용 | 비콘
+				</small>
+			</li>
+			<li>
+				<small>
+					예) 카메라 차단 | 수동
+				</small>
+			</li>
+			<li>
+				<label>
+					두번째행<input type="text" name="detail">
+				</label>
+			<li>
+				<small>
+					예) Android 10 | 2.1.10
+				</small>
+			</li>
+			<li>
+				<button onclick="addRow()">
+					행추가
+				</button>
+			</li>
+		</ul>
+		<h3>
+			행제 거
+		</h3>
+		<ul>
+			<li>
+				<label>
+					행번호<input type="number" name="rowNumber">
+				</label>
+			</li>
+			<li>
+				<button onclick="deleteRow()">
+					행제거
+				</button>
+			</li>
+		</ul>
+		<div class="logs">
+		</div>
+		<h3>
+			백업 및 복구
+		</h3>
+		<textarea id="data-textarea"></textarea>
+		<button onclick="setData()">
+			이 데이터로 덮어쓰기
+		</button>
+		<script type="text/javascript" src="setting.js"></script>
+	</body>
+</html>
